@@ -20,4 +20,4 @@ el software con el hardware.
 **Describe al menos dos ejemplos de videojuegos, aplicaciones interactivas, animación procedural o construcción de herramientas para soportar flujos de trabajo artísticos donde el conocimiento de ensamblador podría ser
 crucial para su desarrollo o rendimiento**
 
--
+- Los ejemplos más claros serían los de consolas o computadores antiguos, juegos como The legend of Zelda: Ocarina of time 
