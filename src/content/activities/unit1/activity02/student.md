@@ -20,4 +20,9 @@ el software con el hardware.
 **Describe al menos dos ejemplos de videojuegos, aplicaciones interactivas, animación procedural o construcción de herramientas para soportar flujos de trabajo artísticos donde el conocimiento de ensamblador podría ser
 crucial para su desarrollo o rendimiento**
 
-- Los ejemplos más claros serían los de consolas o computadores antiguos, juegos como The legend of Zelda: Ocarina of time 
+- Los ejemplos más claros serían los de consolas o computadores antiguos, juegos como The legend of Zelda: Ocarina of time debido a que el lenguaje ensamblador fue crucial para su desarrollo. Este juego fue lanzado
+para la consola Nintendo 64, empujó los límites del hardware de la consola gracias a una gran optimización. ejemplo la gestión de la memoria limitada debido a que la nintendo 64 solo tenía 4 MB de RAM, así que el impacto fue que permitió crear un mundo amplio y detalllado sin interrupciones al cambiar entre áreas.
+- lo mismo pasa con los gráficos de ocarina que implementaba optimizar los cálculos de la GPU, utilizando ensamblador para lograr un renderizado fluido en tiempo real.
+
+- Otro ejemplo es es Doom, el ensamblador se utilizó para optimizar los renderizadores, por eso Doom es un juego que se puede jugar en cualquier cosa que tenga pantalla debido a que el control detallado del hardware
+maximiza la velocidad del procesamiento en tiempo real.
