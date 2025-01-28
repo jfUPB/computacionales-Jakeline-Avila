@@ -27,3 +27,34 @@ la condicion para realizar el salto, es decir, qué comando obtener y ejecutar a
 
 ##### Proporciona al menos 3 ejemplos de cada tipo de instrucción, explicando qué hace cada una.
 
+A-instructions:
+
+1. Instrucción: @2  
+Binario: 0000000000000010   
+Función: Carga el valor 2 en el registro A. Esto podría usarse, por ejemplo, para acceder a la posición de memoria 2.  
+
+
+2. Instrucción: @5   
+Binario: 0000000000000101  
+Función: Hace que el ordenador almacene la representación binaria de 5 en el registro A.  
+
+
+3. Instrucción: @1024  
+Binario: 0000010000000000  
+Función: Carga la dirección 1024 en el registro A.  
+
+C-instructions:
+
+1. Instrucción: D=A  
+Binario: 1110110000010000  
+Función: Copia el valor del registro A en el registro D (destino). No modifica la memoria.  
+
+
+2. Instrucción: M=D+1  
+Binario: 1110011111010000  
+Función: Suma 1 al valor del registro D y almacena el resultado en la posición de memoria apuntada por el registro A.  
+
+
+3. Instrucción: D;JGT  
+Binario: 1110001100000001   
+Función: Realiza un salto condicional si el valor del registro D es mayor que 0. Si la condición no se cumple, la ejecución continúa normalmente.  
