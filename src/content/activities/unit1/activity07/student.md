@@ -9,3 +9,17 @@ Entrega: el código del programa en ensamblador Hack y una captura de pantalla d
 
 ### Solución a la actividad 7
 
+
+``` asm
+@5 
+D=A 
+@10 
+D=D+A 
+@3 
+D=D-A 
+@10 
+M=D 
+@0 
+0;JMP
+```
+![WhatsApp Image 2025-01-30 at 8 22 34 AM](https://github.com/user-attachments/assets/b3d3c5a1-9d2d-44f1-8dba-f4989a20bc55)
