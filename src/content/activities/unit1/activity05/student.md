@@ -8,4 +8,4 @@ Enunciado: elige uno de los programas que modificaste en las actividades previas
 Entrega: una tabla que documente el ciclo Fetch-Decode-Execute para cada instrucción del programa elegido.-->
 ### Mi solución a la actividad 5
 
-##### ¿Qué valor tiene el PC al inicio del ciclo?
+![image](https://github.com/user-attachments/assets/5433dcb2-d877-4523-8c60-300f9dbd1bd1)
