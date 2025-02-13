@@ -21,3 +21,23 @@ Entrega: la traducción a ensamblador.-->
 
 ### Mi solución a la actividad 5
 
+``` js
+@10
+D=A
+@16
+M=D
+@5
+D=A
+@17
+M=D
+@16
+D=A
+@18
+M=D
+@18
+D=M
+A=D
+D=M
+@17
+M=D
+```
