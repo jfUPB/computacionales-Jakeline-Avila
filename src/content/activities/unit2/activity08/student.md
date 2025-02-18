@@ -93,4 +93,9 @@ M=M+1
 @4 
 0;JMP
 ```
-
+- Se carga el valor actual del puntero (RAM[16]) en D.
+- Se accede a la dirección 24576 (teclado) y se resta su valor: D = puntero - valor_teclado.
+- Con D; JGE se salta a la dirección 4 si D es mayor o igual a 0. Esto quiere decir que si el puntero es mayor o igual que el valor leído del teclado, no se dibuja nada y se vuelve a leer el teclado.
+- Solo si el puntero es menor que el valor del teclado (Es decir, puntero - valor_teclado < 0) se procede a:
+- Acceder a la dirección de la pantalla indicada por el puntero (A=M en la dirección 16) y escribir -1 en esa posición (M=-1). Lo cual enciende el pixel.
+- Se incrementa el puntero en 1 (M=M+1 en la dirección 16).
