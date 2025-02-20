@@ -74,3 +74,91 @@ M=M+1
 @4 
 0;JMP 
 ```
+- Traduciendolo a C#
+
+``` C#
+namespace computacionales
+{
+
+    using System;
+    using System.Reflection;
+
+    internal class Program
+    {
+      
+           // constantes definidas
+            const int SCREEN_WIDTH = 512;
+            const int SCREEN_HEIGHT = 256;
+            const int PIXELS_FOR_PALABRA = 16;
+        //Tamaño que va a tomar el array Screen (512*256)/16 = 8192
+
+            const int SCREEN_SIZE = (SCREEN_HEIGHT * SCREEN_WIDTH) / PIXELS_FOR_PALABRA;
+        // Dirección base de la pantalla (screen) y del teclado (KBD)
+
+        const int SCREEN_BASE = 16384;
+        const int KBD_ADRESS = 24576;
+
+        //Aquí se simula la memoria de la palabra
+        static int[] SCREEN = new int[SCREEN_SIZE];
+           
+        //Un puntero equivalente a RAM[16] 
+        static int pointer = SCREEN_BASE;
+
+        // Variable que representa el estado del teclado KBD
+        static int KBD = 0;
+
+        static void Main()
+        {
+            // Inicialmente, el puntero se establece en la base de la pantalla
+
+            pointer = SCREEN_BASE;
+
+            // Ahora viene la parte del bucle infinito
+
+            while (true)
+            {
+                //Segun mi logica aqui debo actualizar la variable KBD según la entrada del usuario
+
+                //Por ejemplo KBD = ObtenerEntradaTeclado();
+
+                //Si no se ha presionado ninguna tecla (KBD ==0)
+
+                if (KBD == 0)
+                {
+                    //Se calcula pointer - screen_base. Si es <= 0 no podemos borrar más.
+
+                    if (pointer - SCREEN_BASE > 0)
+                    {
+
+                        // Se decrementa el puntero (Equivalente a "AM=M-1"
+                        pointer--;
+
+                        //Se borra el contenido de la celda screen correspondiente osea colocamos el 0
+                        // El indice con SCREEN es pointer - SCREEN_BASE, ya que SCREEN[0] corresponde a la dirección 16384.
+                        SCREEN[pointer - SCREEN_BASE] = 0;
+                        //
+                    }
+                }
+                else
+                {
+
+                    // Si se ha presionado una tecla (KBD diferente de 0)
+
+                    if (pointer < KBD)
+                    {
+
+                        //escribimos -1 en la celda de SCREEN apuntada osea encender los pixeles
+
+                        SCREEN[pointer - SCREEN_BASE] = -1;
+
+                        pointer++;
+
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+```
