@@ -13,3 +13,27 @@ NO OLVIDES SIMULAR CADA EJEMPLO en lenguaje ensamblador para asegurar que está 
 
 Entrega: el programa en alto nivel y su equivalente en ensamblador. -->
 
+### Mi solución a la actividad 12
+
+- Condicionales
+
+``` C#
+    static void Main(string[] args)
+    {
+        //condicionales
+
+        int x = 5;
+        int y = 10;
+        if (x < y)
+        {
+
+            x = x + 1;
+        }
+        else
+        {
+
+            x = x - 1;
+        }
+    }
+}
+```
