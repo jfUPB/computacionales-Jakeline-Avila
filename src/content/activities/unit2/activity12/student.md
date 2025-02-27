@@ -37,3 +37,240 @@ Entrega: el programa en alto nivel y su equivalente en ensamblador. -->
     }
 }
 ```
+- Equivalente en lenguaje ensamblador:
+
+``` js
+@5
+D=A
+@0
+M=D
+@10
+D=A
+@1
+M=D
+@0
+D=M
+@1
+D=D-M
+@29
+D;JGE
+
+@0
+M=M+1
+@5
+0;JMP
+
+@0
+M=M-1
+0;JMP
+```
+- Ciclos while
+
+``` C#
+int count = 0;
+while (count < 3)
+{
+
+count++;
+
+}
+```
+
+- equivalente a lenguaje ensamblador
+
+``` Js
+@0
+M=0
+
+@0
+D=M
+@3
+D=D-A
+@23
+D;JGE
+@0
+M=M+1
+0;JMP
+```
+- Ciclos for
+
+``` C#
+for (int i = 0; i < 3; i++)
+{}
+```
+- Equivalente a lenguaje ensamblador
+
+``` js
+@0
+M=0
+
+@0
+D=M
+@3
+D=D-A
+@23
+D;JGE
+
+@0
+M=M+1
+@05
+0;JMP
+```
+- Escritura de variable por medio de punteros
+
+``` C#
+int a = 5;
+int* ptr = &a;
+*ptr = 10;
+```
+
+- Equivalente a lenguaje ensamblador
+
+``` js
+@5
+D=A
+@0
+M=D
+
+@0
+D=A
+@1
+M=D
+
+@10
+D=A
+@1
+A=M
+M=D
+```
+- Lectura de variables con punteros
+
+``` C#
+int a = 5;
+int* ptr = &a;
+int b = *ptr;
+```
+
+- Equivalente a lenguaje ensamblador
+
+``` js
+@5
+D=A
+@0
+M=D
+
+@0
+D=A
+@1
+M=D
+
+@1
+A=M
+D=M
+@2
+M=D
+```
+- Manipulación de un arreglo con punteros
+
+``` C#
+int arr[] = {1, 2, 3}
+int* ptr = arr;
+*(ptr + 1) = 10;
+```
+- Equivalentes a lenguaje ensamblador
+
+``` js
+@1
+D=A
+@100
+M=D
+@2
+D=A
+@101
+M=D
+@3
+D=A
+@102
+M=D
+@100
+D=A
+@1
+M=D
+
+@1
+D=A
+@1
+A=M+D
+M=10
+```
+- Llamado a función con parámetros
+
+``` c#
+int Sum(int a, int b) {
+return a + b;
+}
+int result = Sum (3, 4);
+```
+
+- Equivalente a lenguaje ensamblador
+
+``` js
+@3
+D=A
+@0
+M=D
+@4
+D=A
+@1
+M=D
+@23
+0;JMP
+
+@2
+M=D
+@0
+D=M
+@1
+D=D+M
+@0
+0;JMP
+```
+- Llamado a función con retorno de parámetro
+
+``` c#
+int multiply(int a, int b)
+{
+return a * b;
+}
+int result = Multiply (3, 4);
+```
+
+- Equivalente a lenguaje ensamblador
+
+``` js
+@3
+D=A
+@0
+M=D
+@4
+D=A
+@1
+M=D
+
+@23
+0;JMP
+
+@2
+M=D
+
+@0
+D=M
+@1
+D=D*M
+
+@0
+0;JMP
+```
+
+
+
