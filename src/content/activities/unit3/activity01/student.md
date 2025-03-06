@@ -10,7 +10,7 @@
   
 ![ConsoleApplication1 (Depuración) - Microsoft Visual Studio 6_03_2025 8_32_04 a  m](https://github.com/user-attachments/assets/a36de70a-df81-4726-8ecf-a4bd059657aa)
 
-- Detener y pausar depuración
+- Detener y pausar depuración: 
 
 ![image](https://github.com/user-attachments/assets/cbbdb49f-b5b1-4794-8771-487cef8faf55)
 
