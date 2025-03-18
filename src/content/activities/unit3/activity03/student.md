@@ -6,6 +6,7 @@
 
 - Mapa de memoria usando el que nos dio el profe:
 
+``` bash
 +-------------------------------+
 |       Segmento de código      |
 |   (instrucciones, funciones)  |  <--- Código ejecutable de las funciones.
@@ -27,3 +28,4 @@
 | Dirección de variable 'b'     |  <--- Dirección de la variable local 'b'
 | Dirección de variable 'c'     |  <--- Dirección de la variable local 'c'
 +-------------------------------+
+```
