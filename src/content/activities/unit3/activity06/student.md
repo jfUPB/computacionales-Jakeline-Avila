@@ -99,6 +99,8 @@ int main() {
 ```
 - ¿Qué ocurre?
 Descripción del comportamiento: El código realiza las siguientes acciones:
+![ConsoleApplication6 (Depuración) - Microsoft Visual Studio 18_03_2025 9_38_44 a  m](https://github.com/user-attachments/assets/67ad8156-5c2f-49d0-980e-7898d1d4d8d9)
+
 
 Se asigna memoria dinámica en el Heap para un arreglo de enteros.
 Se inicializan y muestran los valores del arreglo.
