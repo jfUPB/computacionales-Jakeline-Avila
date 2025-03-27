@@ -46,3 +46,5 @@ Comparación con Locals:
 La dirección mostrada en Memory1 coincide exactamente con el valor de pHeap que se visualiza en la pestaña Locals.
 
 Significado: Esto confirma que la variable pHeap almacena efectivamente la dirección del objeto en el heap. Es una validación de que el puntero apunta correctamente a la región de memoria donde se encuentra el objeto creado con new.
+
+![ConsoleApplication8 (Depuración) - Microsoft Visual Studio 27_03_2025 8_09_24 a  m](https://github.com/user-attachments/assets/92ccf385-f356-44ee-b7b5-d27ed8b449d3)
