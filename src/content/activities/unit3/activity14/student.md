@@ -97,7 +97,7 @@ Objetos en el Stack y en el Heap:
 
 Un concepto fundamental fue entender la diferencia entre los objetos en el stack y en el heap. Los objetos en el stack se destruyen automáticamente cuando salen de su alcance, mientras que los objetos en el heap deben ser liberados manualmente usando delete. El siguiente código muestra cómo se crean objetos en el stack y en el heap:
 
-``` c+
+``` c++
 #include <iostream>
 using namespace std;
 
