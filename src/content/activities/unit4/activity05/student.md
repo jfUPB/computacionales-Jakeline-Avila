@@ -1,0 +1,3 @@
+### Mi solucion a la actividad 5
+
+Lo que me resultó más fácil fue entender el concepto de la cola y su funcionamiento FIFO, ya que se parece mucho a lo que aprendí con listas enlazadas y el manejo de punteros en estructuras dinámicas. Sin embargo, lo más complicado fue manejar correctamente la memoria al eliminar nodos, especialmente en los métodos dequeue() y clear(), porque al principio me generaban errores o la cola no se vaciaba bien. Para resolverlo, usé el depurador de Visual Studio, coloqué puntos de interrupción y observé paso a paso cómo cambiaban los punteros, lo cual me ayudó a identificar errores y asegurarme de que no quedaran nodos huérfanos.
