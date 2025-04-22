@@ -1,4 +1,4 @@
-### Mi solución a la actividad 5
+### Mi solución a la actividad 2
 
 - Antes de ejecutar el experimento, ¿Qué esperas ver en memoria (hipótesis)? Ejecuta el código y
 muestra una captura de pantalla del objeto en la memoria. ¿Qué puedes observar? ¿Qué información te proporciona el depurador? ¿Qué puedes concluir?
