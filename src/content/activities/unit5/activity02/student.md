@@ -24,3 +24,19 @@ direcciones, tipos, y valores actuales. El depurador me mostró qué tan viva es
 Observa con el depurador la ventana de Auto o Locals y la ventana de Memory 1. Trata de buscar en memoria todas las partes que componen al objeto tipo CircularExplosion ¿Qué puedes observar en la memoria?
 ¿Qué información te proporciona el depurador?
 ¿Qué puedes concluir? NO OLVIDES tener a la mano todas la jerarquía de clases que componen a CircularExplosion. De esta manera podrás identificar cada parte del objeto en memoria.
+
+R/= Jerarquía de Circular explosion
+```
+ofBaseApp  (vptr)
+ └─ Particle        (pos, vel, …)
+      └─ ExplosionParticle  (color, life, size, …)
+           └─ CircularExplosion  (no datos extra)
+```
+
+¿Qué nos aporta el depurador?
+La alineación de cada campo (por ejemplo, float en múltiplos de 4 bytes, padding tras el ofColor).
+
+No hay “datos secretos”: todo lo que se usa en C++ (miembros públicos/privados) está en memoria tal cual.
+
+El vtable único al inicio y ningún puntero extra: el despachador virtual está centralizado.
+Herencia múltiple de datos (aquí simple) se traduce en bloques contiguos de memoria, en orden de declaración.
