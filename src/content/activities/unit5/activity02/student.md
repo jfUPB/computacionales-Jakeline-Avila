@@ -40,3 +40,4 @@ No hay “datos secretos”: todo lo que se usa en C++ (miembros públicos/priva
 
 El vtable único al inicio y ningún puntero extra: el despachador virtual está centralizado.
 Herencia múltiple de datos (aquí simple) se traduce en bloques contiguos de memoria, en orden de declaración.
+![image](https://github.com/user-attachments/assets/162704b7-c3e8-4fdc-b5c2-4fa042943e39)
