@@ -2,6 +2,7 @@
 
 - Antes de ejecutar el experimento, ¿Qué esperas ver en memoria (hipótesis)? Ejecuta el código y
 muestra una captura de pantalla del objeto en la memoria. ¿Qué puedes observar? ¿Qué información te proporciona el depurador? ¿Qué puedes concluir?
+![image](https://github.com/user-attachments/assets/592fa48c-6b49-4329-aa1e-cf15819cfea6)
 
 R/= Antes de correr el programa, me puse a pensar en qué podría encontrarme cuando mire la memoria con el depurador. 
 Como sé que en la programación orientada a objetos un objeto es una instancia de una clase, mi hipótesis es que voy a ver una estructura que representa a 
