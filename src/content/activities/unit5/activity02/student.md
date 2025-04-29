@@ -44,3 +44,28 @@ Herencia múltiple de datos (aquí simple) se traduce en bloques contiguos de me
 
 ![image](https://github.com/user-attachments/assets/33d38c90-801a-4b29-8a22-b47f34c8b480)
 
+
+- ¿Qué es el encapsulamiento? ¿Por qué es importante?
+R/= Al correr el ejemplo con AccessControl, te das cuenta de que solo publicVar puede modificarse directamente. Si descomentás las líneas con protectedVar o privateVar, el compilador se queja. Y eso está bien: el encapsulamiento protege el estado interno del objeto, evitando que lo modifiques accidentalmente o de forma incorrecta desde afuera.
+
+- ¿Cómo se implementa la herencia en C++?
+R/= En C++, la herencia se implementa haciendo que una clase "hija" (o derivada) herede de una clase "padre" (o base) usando la sintaxis class Derivada : public Base {}. Internamente, el compilador organiza la memoria de un objeto derivado como si empezara por la parte base, y luego le añade los campos de la clase derivada.
+
+- ¿Cómo se ve un objeto con herencia múltiple?
+R/= La herencia múltiple en C++ permite heredar de más de una clase base, algo que C# no permite directamente.
+
+- Analisis del metodo update:
+
+R/= Al ejecutar el código de ofApp.cpp y observar el ciclo:
+
+```
+for (int i = 0; i < particles.size(); i++) {
+    particles[i]->update(dt);
+}
+```
+...y usando el depurador cuando el vector particles tiene diferentes tipos de partículas (por ejemplo, RisingParticle, CircularExplosion, etc.), lo que vas a notar es que aunque particles[i] es un puntero a Particle, el método update() que se ejecuta es el de la clase real del objeto.
+
+Esto es polimorfismo en acción: el vptr de cada objeto apunta a su propia vtable, y esa vtable tiene la dirección de la versión correcta de update().
+
+- ¿Qué relación existe entre los métodos virtuales y el polimorfismo?
+R/= Total. Los métodos virtuales son la base del polimorfismo en tiempo de ejecución en C++. Si un método no es virtual, entonces el compilador resuelve qué función usar en tiempo de compilación. Pero si es virtual, la decisión se toma en tiempo de ejecución usando la vtable del objeto.
