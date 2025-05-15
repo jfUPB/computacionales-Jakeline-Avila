@@ -40,8 +40,8 @@ Este bloque llama al método notify() de la clase Subject (que es ofApp en este 
 
 El método notify recorre la lista de observadores (en este caso, las partículas) y llama a onNotify() de cada uno de ellos:
 
-``` c+
-void Subject::notify(const std::string& event) {
+``` c++
+ject::notify(const std::string& event) {
     for (Observer* observer : observers) {
         observer->onNotify(event);
     }
@@ -53,7 +53,7 @@ El método se encarga de pasar el evento "attract" a todos los observadores regi
 
 La clase Particle implementa la interfaz Observer y su método onNotify(). Cuando una partícula recibe el evento "attract", el método onNotify de la clase Particle se ejecuta:
 
-``` c+
+``` c++
 void Particle::onNotify(const std::string& event) {
     if (event == "attract") {
         setState(new AttractState());
@@ -72,7 +72,7 @@ Respuesta:
 
 Las instancias de Particle se añaden como observadores de ofApp en el método setup() de la clase ofApp. Específicamente, se llama a addObserver() para registrar cada partícula en la lista de observadores. Aquí está el código relevante:
 
-``` c+
+``` c++
 void ofApp::setup() {
     ofBackground(0);
     // Crear partículas usando la fábrica
@@ -100,7 +100,7 @@ En este bloque de código, cada vez que se crea una nueva partícula, se agrega 
 Eliminación de Observadores:
 Aunque en este ejemplo no se elimina explícitamente ningún observador, si fuera necesario eliminar una partícula de la lista de observadores (por ejemplo, si una partícula se destruye), se usaría el método removeObserver() de la clase Subject. El código para eliminar un observador se vería algo así:
 
-``` c+
+``` c++
 void ofApp::removeObserver(Observer* observer) {
     observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
 }
@@ -114,7 +114,7 @@ Idealmente, el destructor de ofApp debería llamar a removeObserver() para elimi
 
 El destructor de ofApp podría verse así:
 
-``` c+
+``` c++
 ofApp::~ofApp() {
     // Eliminar todas las partículas como observadores antes de destruirlas
     for (Particle* p : particles) {
