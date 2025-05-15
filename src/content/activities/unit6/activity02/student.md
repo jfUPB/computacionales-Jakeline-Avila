@@ -29,7 +29,7 @@ Respuestas:
 
 Cuando se presiona la tecla 'a', se ejecuta el siguiente bloque de código dentro de keyPressed:
 
-``` c+
+``` c++
 if (key == 'a') {
     notify("attract");
 }
